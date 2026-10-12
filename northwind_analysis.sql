@@ -101,3 +101,28 @@ ORDER BY
     TotalSpent DESC;
 
 
+-- ==========================================
+-- Analysis 5: Monthly Sales Trends
+-- Business Question:
+-- Which months generate the highest sales?
+-- ==========================================
+
+SELECT
+    YEAR(o.OrderDate) AS SalesYear,
+    MONTH(o.OrderDate) AS SalesMonth,
+    SUM(od.Quantity * p.Price) AS TotalSales,
+    COUNT(DISTINCT o.OrderID) AS TotalOrders
+FROM Orders AS o
+INNER JOIN OrderDetails AS od
+    ON o.OrderID = od.OrderID
+INNER JOIN Products AS p
+    ON od.ProductID = p.ProductID
+GROUP BY
+    YEAR(o.OrderDate),
+    MONTH(o.OrderDate)
+ORDER BY
+    SalesYear,
+    SalesMonth;
+
+
+
