@@ -102,6 +102,19 @@ The query joins orders with employee records, order details, and product informa
 
 **Business Recommendation:** Management could use these results to review inventory availability and purchasing plans for high-performing categories such as Beverages and Dairy Products. Lower-sales categories should be investigated further before changing stock levels, taking profitability, seasonality, and customer demand into account.
 
+### Analysis 5: Monthly Sales Trends
+
+**Business Question:** Which months generate the highest sales?
+
+**Approach:** The query joins Orders, OrderDetails, and Products. It calculates estimated sales from product quantities and listed prices, counts distinct orders, and groups results by year and month.
+
+**Key Findings:**
+- January 1997 recorded the highest estimated sales in the displayed period, at 83,400.47 across 33 orders.
+- February 1997 recorded the lowest estimated sales in the displayed period, at 19,978.91 across 11 orders.
+- Estimated sales rose from October 1996 through January 1997, then declined in February 1997.
+
+**Business Recommendation:** Management could use monthly sales trends to support inventory planning and staffing decisions. Before interpreting the February decline as a seasonal pattern, analyze a longer period and consider factors such as discounts, product availability, and changes in customer demand.
+
 ## Key Findings
 
 The SQL analysis identified the five highest-value orders in the Northwind sample database.
