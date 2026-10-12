@@ -47,3 +47,30 @@ GROUP BY
     e.LastName
 ORDER BY
     TotalSales DESC;
+
+
+-- ==========================================
+-- Analysis 3: Sales by Product Category
+-- Business Question:
+-- Which product categories generate the highest sales?
+-- ==========================================
+
+SELECT
+    c.CategoryID,
+    c.CategoryName,
+    SUM(od.Quantity * p.Price) AS TotalSales,
+    SUM(od.Quantity) AS TotalQuantitySold,
+    COUNT(DISTINCT o.OrderID) AS TotalOrders
+FROM Categories AS c
+INNER JOIN Products AS p
+    ON c.CategoryID = p.CategoryID
+INNER JOIN OrderDetails AS od
+    ON p.ProductID = od.ProductID
+INNER JOIN Orders AS o
+    ON od.OrderID = o.OrderID
+GROUP BY
+    c.CategoryID,
+    c.CategoryName
+ORDER BY
+    TotalSales DESC;
+
