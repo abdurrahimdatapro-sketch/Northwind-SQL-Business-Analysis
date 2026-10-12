@@ -115,6 +115,14 @@ The query joins orders with employee records, order details, and product informa
 
 **Business Recommendation:** Management could use monthly sales trends to support inventory planning and staffing decisions. Before interpreting the February decline as a seasonal pattern, analyze a longer period and consider factors such as discounts, product availability, and changes in customer demand.
 
+
+### Monthly Sales Trend Visualization
+
+![Northwind Monthly Sales Trend](images/chart-line.png)
+
+The chart shows estimated monthly sales from July 1996 to February 1997. Sales peaked in January 1997 before declining in February. Further analysis is needed to determine the cause of this decline.
+
+
 ## Key Findings
 
 The SQL analysis identified the five highest-value orders in the Northwind sample database.
