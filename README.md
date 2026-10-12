@@ -66,6 +66,16 @@ ORDER BY
 
 The query joins orders with employee records, order details, and product information. It calculates each order's value by multiplying the quantity of each product by its listed price and summing the results for each order. The results are sorted in descending order, and `TOP 5` returns the five highest-value orders.
 
+### Analysis 2: Total Sales by Employee
+
+**Business Question:** Which employees generate the highest total sales across all their orders?
+
+**Approach:** The query joins the Employees, Orders, OrderDetails, and Products tables. It calculates estimated sales by multiplying product quantities by listed prices, sums the values for each employee, counts distinct orders, and sorts employees by total sales in descending order.
+
+**Key Finding:** Margaret Peacock ranked first among the employees shown, generating estimated sales of 105,696.50 across 40 orders. Nancy Davolio ranked second with 57,690.39 across 29 orders.
+
+**Business Recommendation:** Management could use employee sales totals and order counts as part of a broader performance review. Additional measures, such as profit margins, customer satisfaction, and order complexity, should also be considered before making bonus decisions.
+
 ## Key Findings
 
 The SQL analysis identified the five highest-value orders in the Northwind sample database.
