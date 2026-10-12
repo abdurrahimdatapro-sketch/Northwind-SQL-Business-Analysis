@@ -74,3 +74,30 @@ GROUP BY
 ORDER BY
     TotalSales DESC;
 
+
+-- ==========================================
+-- Analysis 4: Customer Purchasing Behavior
+-- Business Question:
+-- Which customers spend the most and how many
+-- orders do they place?
+-- ==========================================
+
+SELECT
+    c.CustomerID,
+    c.CustomerName,
+    COUNT(DISTINCT o.OrderID) AS TotalOrders,
+    SUM(od.Quantity * p.Price) AS TotalSpent
+FROM Customers AS c
+INNER JOIN Orders AS o
+    ON c.CustomerID = o.CustomerID
+INNER JOIN OrderDetails AS od
+    ON o.OrderID = od.OrderID
+INNER JOIN Products AS p
+    ON od.ProductID = p.ProductID
+GROUP BY
+    c.CustomerID,
+    c.CustomerName
+ORDER BY
+    TotalSpent DESC;
+
+
