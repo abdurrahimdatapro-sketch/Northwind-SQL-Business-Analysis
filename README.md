@@ -76,6 +76,19 @@ The query joins orders with employee records, order details, and product informa
 
 **Business Recommendation:** Management could use employee sales totals and order counts as part of a broader performance review. Additional measures, such as profit margins, customer satisfaction, and order complexity, should also be considered before making bonus decisions.
 
+### Analysis 3: Sales by Product Category
+
+**Business Question:** Which product categories generate the highest sales?
+
+**Approach:** The query joins Categories, Products, OrderDetails, and Orders. It calculates estimated sales by multiplying product quantities by listed prices, sums the quantity sold, counts distinct orders, and ranks categories by estimated sales in descending order.
+
+**Key Findings:**
+- Beverages ranked first in estimated sales at 99,464.50 across 80 orders.
+- Dairy Products recorded the highest quantity sold, with 2,601 units and estimated sales of 69,921.00.
+- Grains/Cereals recorded the lowest estimated sales, at 22,327.75.
+
+**Business Recommendation:** Management could use these results to review inventory availability and purchasing plans for high-performing categories such as Beverages and Dairy Products. Lower-sales categories should be investigated further before changing stock levels, taking profitability, seasonality, and customer demand into account.
+
 ## Key Findings
 
 The SQL analysis identified the five highest-value orders in the Northwind sample database.
