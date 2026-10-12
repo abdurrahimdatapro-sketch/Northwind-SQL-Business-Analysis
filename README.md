@@ -82,6 +82,19 @@ The query joins orders with employee records, order details, and product informa
 
 **Approach:** The query joins Categories, Products, OrderDetails, and Orders. It calculates estimated sales by multiplying product quantities by listed prices, sums the quantity sold, counts distinct orders, and ranks categories by estimated sales in descending order.
 
+### Analysis 4: Customer Purchasing Behavior
+
+**Business Question:** Which customers spend the most, and how many orders do they place?
+
+**Approach:** The query joins Customers, Orders, OrderDetails, and Products. It calculates estimated customer spending using product quantities and listed prices, counts distinct orders, and sorts customers by estimated spending in descending order.
+
+**Key Findings:**
+- Ernst Handel ranked first in the displayed results, with estimated spending of 35,631.21 across 10 orders.
+- Mère Paillarde ranked second, with estimated spending of 23,362.60 across 5 orders.
+- Save-a-lot Markets ranked third, with estimated spending of 22,500.06 across 4 orders.
+
+**Business Recommendation:** Consider targeted retention initiatives for high-spending customers, while investigating whether customers with fewer orders could be encouraged to purchase more frequently. Use additional information, such as profit margins and customer history, before deciding which customers to prioritize.
+
 **Key Findings:**
 - Beverages ranked first in estimated sales at 99,464.50 across 80 orders.
 - Dairy Products recorded the highest quantity sold, with 2,601 units and estimated sales of 69,921.00.
