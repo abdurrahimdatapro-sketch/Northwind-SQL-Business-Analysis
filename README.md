@@ -28,7 +28,7 @@ The project uses the Northwind sample database, which contains the following tab
 - Calculated fields
 - GROUP BY
 - ORDER BY
-- LIMIT
+- TOP
 - Business-focused data analysis
 
 ## SQL Analysis
