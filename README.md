@@ -77,10 +77,6 @@ The SQL analysis identified the five highest-value orders in the Northwind sampl
 
 These values were calculated by multiplying each product's quantity by its listed price and summing the results for each order. Discounts, shipping charges, and other adjustments were not included.
 
-## Business Recommendation
-
-Management could consider these results as one input when evaluating employee contributions and bonus eligibility. However, because the analysis focuses only on the five highest-value individual orders, it should be supplemented with total sales per employee, the number of orders handled, and other relevant performance measures before bonuses are awarded.
-
 ## Analysis Approach
 
 The analysis connects orders with employee records, order details, and product prices. It calculates the estimated value of each order by multiplying product quantity by unit price and summing the line values for each order.
