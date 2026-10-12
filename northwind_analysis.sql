@@ -21,3 +21,29 @@ GROUP BY
     e.LastName
 ORDER BY
     OrderAmount DESC;
+
+-- ==========================================
+-- Analysis 2: Total Sales by Employee
+-- Business Question:
+-- Which employees generate the highest total sales?
+-- ==========================================
+
+SELECT
+    e.EmployeeID,
+    e.FirstName,
+    e.LastName,
+    COUNT(DISTINCT o.OrderID) AS TotalOrders,
+    SUM(od.Quantity * p.Price) AS TotalSales
+FROM Employees AS e
+INNER JOIN Orders AS o
+    ON e.EmployeeID = o.EmployeeID
+INNER JOIN OrderDetails AS od
+    ON o.OrderID = od.OrderID
+INNER JOIN Products AS p
+    ON od.ProductID = p.ProductID
+GROUP BY
+    e.EmployeeID,
+    e.FirstName,
+    e.LastName
+ORDER BY
+    TotalSales DESC;
