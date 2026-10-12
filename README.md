@@ -82,6 +82,13 @@ The query joins orders with employee records, order details, and product informa
 
 **Approach:** The query joins Categories, Products, OrderDetails, and Orders. It calculates estimated sales by multiplying product quantities by listed prices, sums the quantity sold, counts distinct orders, and ranks categories by estimated sales in descending order.
 
+**Key Findings:**
+- Beverages ranked first in estimated sales at 99,464.50 across 80 orders.
+- Dairy Products recorded the highest quantity sold, with 2,601 units and estimated sales of 69,921.00.
+- Grains/Cereals recorded the lowest estimated sales, at 22,327.75.
+
+**Business Recommendation:** Management could use these results to review inventory availability and purchasing plans for high-performing categories such as Beverages and Dairy Products. Lower-sales categories should be investigated further before changing stock levels, taking profitability, seasonality, and customer demand into account.
+
 ### Analysis 4: Customer Purchasing Behavior
 
 **Business Question:** Which customers spend the most, and how many orders do they place?
@@ -94,13 +101,6 @@ The query joins orders with employee records, order details, and product informa
 - Save-a-lot Markets ranked third, with estimated spending of 22,500.06 across 4 orders.
 
 **Business Recommendation:** Consider targeted retention initiatives for high-spending customers, while investigating whether customers with fewer orders could be encouraged to purchase more frequently. Use additional information, such as profit margins and customer history, before deciding which customers to prioritize.
-
-**Key Findings:**
-- Beverages ranked first in estimated sales at 99,464.50 across 80 orders.
-- Dairy Products recorded the highest quantity sold, with 2,601 units and estimated sales of 69,921.00.
-- Grains/Cereals recorded the lowest estimated sales, at 22,327.75.
-
-**Business Recommendation:** Management could use these results to review inventory availability and purchasing plans for high-performing categories such as Beverages and Dairy Products. Lower-sales categories should be investigated further before changing stock levels, taking profitability, seasonality, and customer demand into account.
 
 ### Analysis 5: Monthly Sales Trends
 
